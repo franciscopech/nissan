@@ -1,0 +1,16 @@
+﻿@{    
+    ViewData["Title"] = "Crear una cuenta";
+}
+
+<h1>Crear una nueva cuenta</h1>
+<div id="create_acount" class="div_form">
+    <label>Nombre</label>
+    <input v-model="Name" type="text" step="0.10" placeholder="Nombre de la cuenta" />    
+    <label>Saldo inicial</label>
+    <input v-model="Balance" type="number" step="0.10" placeholder="Saldo en la cuenta"/>
+    <button v-on:click="save()">Crear</button>
+</div>
+@section Scripts
+{
+    <script src="~/Vue/apps/Account.js"></script>
+}

@@ -1,0 +1,18 @@
+﻿#accounts
+{
+    width:50%;
+    margin:auto;
+}
+#accounts ul
+{
+    list-style:none;
+}
+#accounts ul li {
+        padding: 20px;
+        border: 1px solid #e1e1e1
+}
+#accounts ul li a{
+    display:block;
+    color:#000;
+    text-decoration:none;
+}

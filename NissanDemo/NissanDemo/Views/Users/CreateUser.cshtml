@@ -1,0 +1,31 @@
+﻿@{
+    Layout = "";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="~/css/header.css" />
+    <link rel="stylesheet" href="~/css/Controls.css" />
+    <title>Login</title>
+</head>
+<body>    
+    <div id="create" class="div_form center_form">
+        <img srcset="~/img/Logo-TCR-outline-small.webp"/>
+        <input type="text" v-model="user.FirstName" placeholder="Nombre(s)" />
+        <input type="text" v-model="user.LastName" placeholder="Apellido(s)" />
+        <input type="text" v-model="user.Identification" placeholder="Identificación" />
+        <input type="text" v-model="user.Email" placeholder="Correo" />
+        <input type="password" v-model="user.Password" placeholder="Contraseña" />
+        <input type="password" v-model="user.RePassword" placeholder="Confirmar contraseña" />
+        <button v-on:click="Save()">Crear</button>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="~/js/app.js"></script>
+    <script type="text/javascript" src="~/Vue/vue.js"></script>    
+    <script src="~/Vue/apps/CreateUser.js"></script>
+</body>
+</html>

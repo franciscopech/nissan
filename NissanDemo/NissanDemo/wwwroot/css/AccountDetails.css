@@ -1,0 +1,11 @@
+﻿#movimientos {
+    list-style: none;
+    margin-top: 20px;
+}
+#movimientos li{
+    padding:20px;
+    border:1px solid #e1e1e1
+}
+#movimientos li p {
+    margin: 10px 0;
+}

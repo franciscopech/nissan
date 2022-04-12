@@ -1,0 +1,19 @@
+﻿header {
+    width: 100%;
+    height: 50px;
+    position: relative;
+    background: #113D8D;
+}
+nav
+{
+    display:flex;
+    position:absolute;
+    right:10%;
+    top: 50%;
+    transform:translateY(-50%);
+}
+nav a{
+    text-decoration:none;
+    color: #fff;
+    margin: 0 10px;
+}

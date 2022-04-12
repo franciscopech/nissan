@@ -1,0 +1,18 @@
+﻿@{
+
+}
+
+<h1>Retirar dinero</h1>
+<div id="transaction" class="div_form">
+    <select v-model="IdSelectedAccount">
+        <option value="-1" selected disabled>Selecciona una cuenta</option>
+        <option v-for="item in Accounts" :value="item.Id">{{ item.Name }}</option>
+    </select>
+    <input type="number" min="0.0" :max="MaxAmount" v-model="Amount" />
+    <button v-on:click="Doit()">Retirar</button> 
+    
+</div>
+@section Scripts
+{
+    <script src="~/Vue/apps/Withdrawal.js"></script>
+}

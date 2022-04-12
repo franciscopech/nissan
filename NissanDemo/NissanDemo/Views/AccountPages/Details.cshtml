@@ -1,0 +1,28 @@
+﻿@{
+}
+@model NissanDemo.Models.Objects.Account
+
+@section Styles
+{
+    <link rel="stylesheet" href="~/css/AccountDetails.css" />
+}
+
+<div id="count-detail"></div>
+<h1>Detalles de la cuenta</h1>
+
+<h2>Información de la cuenta:</h2>
+<p>Saldo en la cuenta: @Model?.Balance.ToString("$0.00")</p>
+
+<h2>Movimientos:</h2>
+<ul id="movimientos">
+    <li v-for="movimiento in Transitions">
+        <p v-if="movimiento.IsDeposit">Depósito realizado el {{ movimiento.Date}}</p>
+        <p v-else>Retiro realizado el {{ movimiento.Date}}</p>
+        <p>${{ movimiento.Amount }}</p>
+    </li>
+</ul>
+
+@section Scripts
+{
+    <script src="~/Vue/apps/Account.js"></script>
+}

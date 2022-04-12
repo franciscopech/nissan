@@ -1,0 +1,34 @@
+﻿
+@using Microsoft.AspNetCore.Http
+@{
+    
+    ViewData["Title"] = "Index";
+
+    string cntx = Context.Session.GetString("User");
+    NissanDemo.Models.Objects.User OUser = null;
+    if(cntx != null)
+        OUser = Newtonsoft.Json.JsonConvert.DeserializeObject<NissanDemo.Models.Objects.User>(cntx);
+}
+
+@section Styles
+{
+    <link rel="stylesheet" href="~/css/UserProfile.css" />
+}
+<h1>
+    Hola @OUser?.FirstName
+</h1>
+<h2>Cuentas acuales</h2>
+<div id="accounts">
+    <ul>
+        <li v-for="item in lista">
+            <a v-bind:href="'/account/details?account=' + item.Id">            
+                <p><strong>{{ item.Name }}</strong></p>
+                <p>Saldo actual: {{ item.Balance}}</p>
+            </a>
+        </li>
+    </ul>
+</div>
+@section Scripts
+{
+    <script src="~/Vue/apps/User.js" ></script>
+}
